@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"  # Change this to your desired region
+  region = "us-east-1"
 }
 
 resource "aws_appsync_graphql_api" "example_api" {
@@ -31,8 +31,11 @@ resource "aws_appsync_type" "example_type" {
   api_id = aws_appsync_graphql_api.example_api.id
   name   = "ExampleType"
 
-  field {
-    name = "message"
-    type = "String"
-  }
+  definition = """
+    type ExampleType {
+      message: String
+    }
+  """
+
+  format = "SDL"
 }
