@@ -1,6 +1,6 @@
 Steps:
 1.	Requirements:
-  a.	Terraform
+  a.	Terraform:-
   b.	AWS Account
   c.	Github Account
   d.	Git Bash
