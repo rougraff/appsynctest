@@ -1,41 +1,36 @@
 Steps:
-1.	Requirements:
+1.	Requirements:<br>
   a.	Terraform<br>
-  b.	AWS Account
-  c.	Github Account
-  d.	Git Bash
-  e.	Go
-  f.	Windows Powershell
-2.	Git Bash Commands:
-        git config --global user.name "Your Name"
-        git config --global user.email "your.email@example.com"
-        ssh-keygen -t rsa -C your.email@example.com
-  a.	Press Enter when asked to choose the default location for the SSH key (usually, ~/.ssh/id_rsa).
-3.	Enter a passphrase for the SSH key (optional).
-  a.	Press Enter when asked to choose the default location for the SSH key (usually, ~/.ssh/id_rsa).
-  b.	Enter a passphrase for the SSH key (optional).
-  c.	Press Enter when asked to choose the default location for the SSH key (usually, ~/.ssh/id_rsa).
-  d.	Enter a passphrase for the SSH key (optional).
-4.	Windows Powershell Commands:
-        mkdir my-graphql-api
-        cd my-graphql-api
-5.	Create a file named main.tf in your Terraform project directory. Can check our code above.
-6.	Create a new directory named functions within your Terraform project directory.
-        Powershell command: 
-        mkdir functions
-7.	Inside the functions directory, create a new Golang file (e.g., hello.go). Can check our code above.
-8.	Powershell commands:
-        go mod init my-graphql-api/functions
-        go get github.com/aws/aws-lambda-go/events
-        go get github.com/aws/aws-lambda-go/lambda
-        go build -o functions/hello functions/hello.go
-        cd C:\Users\<YourUsername>\my-graphql-api
-        $env:AWS_SECRET_ACCESS_KEY="XXXXX"
-        $env:AWS_ACCESS_KEY_ID="XXXXX"
-        Terraform init
-        Terraform plan
-        Terraform apply
-9.	Go into AppSync and check if you are able to query:
-a.	If error try editing schema and deleting subscriptions / mutations
-b.	Create an API key
-10.	Query your API
+  b.	AWS Account<br>
+  c.	Github Account<br>
+  d.	Git Bash<br>
+  e.	Go<br>
+  f.	Windows Powershell<br>
+2.	Git Bash Commands:<br>
+        git config --global user.name "Your Name"<br>
+        git config --global user.email "your.email@example.com"<br>
+        ssh-keygen -t rsa -C your.email@example.com<br>
+  a.	Press Enter when asked to choose the default location for the SSH key (usually, ~/.ssh/id_rsa).<br>
+3.	Enter a passphrase for the SSH key (optional).<br>
+  a.	Press Enter when asked to choose the default location for the SSH key (usually, ~/.ssh/id_rsa).<br>
+  b.	Enter a passphrase for the SSH key (optional).<br>
+  c.	Press Enter when asked to choose the default location for the SSH key (usually, ~/.ssh/id_rsa).<br>
+  d.	Enter a passphrase for the SSH key (optional).<br>
+4.  IAM Policies <br>
+        AdministratorAccess	<br>
+        AWSAppSyncAdministrator	<br>
+        AWSLambda_FullAccess<br>
+5.	Windows Powershell Commands:<br>
+        git clone git@github.com:rougraff/appsynctest.git <br>
+        go mod init appsynctest/functions<br>
+  	    go get github.com/aws/aws-lambda-go/events<br>
+  	    go get github.com/aws/aws-lambda-go/lambda<br>
+  	    go build -o functions/hello functions/hello.go<br>
+  	    $env:AWS_SECRET_ACCESS_KEY="XXXXX"<br>
+        $env:AWS_ACCESS_KEY_ID="XXXXX"<br>
+  	    Terraform init<br>
+        Terraform plan<br>
+        Terraform apply<br>
+11.	AppSync<br>
+    a. Create an API key<br>
+    b. Query your API<br>
