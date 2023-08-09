@@ -7,7 +7,7 @@ provider "aws" {
 
 #Creates an AWS AppSync GraphQL API named "SampleAppSyncAPI" and defines schema
 resource "aws_appsync_graphql_api" "sample_appsync_api" {
-  name                = "SampleAppSyncAPI"
+  name                = "DemoAppSyncAPI"
   authentication_type = "API_KEY"  # You can change the authentication method as needed
 
   schema = <<EOF
