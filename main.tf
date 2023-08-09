@@ -4,6 +4,7 @@
 provider "aws" {
   region = "us-east-1"  # Replace with your desired AWS region
 }
+
 #Creates an AWS AppSync GraphQL API named "SampleAppSyncAPI" and defines schema
 resource "aws_appsync_graphql_api" "sample_appsync_api" {
   name                = "SampleAppSyncAPI"
