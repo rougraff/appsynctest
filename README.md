@@ -16,6 +16,7 @@ Steps:
   b.	Enter a passphrase for the SSH key (optional).<br>
   c.	Press Enter when asked to choose the default location for the SSH key (usually, ~/.ssh/id_rsa).<br>
   d.	Enter a passphrase for the SSH key (optional).<br>
+  e. Add SSH key to Github page.
 4.  IAM Policies <br>
         AdministratorAccess	<br>
         AWSAppSyncAdministrator	<br>
