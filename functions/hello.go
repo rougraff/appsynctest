@@ -1,3 +1,5 @@
+//AWS Lambda function written in Go that can be used with AWS API Gateway to handle HTTP requests and responses
+
 package main
 
 import (
